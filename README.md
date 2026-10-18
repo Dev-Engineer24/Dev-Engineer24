@@ -1,22 +1,25 @@
-## Erik Lindqvist // Stockholm
+# Erik Lindqvist
 
-Systems engineer focusing on structured concurrency, async event loops, task isolation, and network runtimes in Python.
-
----
-
-### 📡 Upstream Ledger & Contributions
-
-* **[agronholm/anyio](https://github.com/agronholm/anyio)** — TaskGroup lifecycles, cancellation semantics, and inter-thread signal routing.
-* **[python-trio/trio](https://github.com/python-trio/trio)** — Nursery boundaries and non-blocking stream synchronization.
-* **[encode/httpx](https://github.com/encode/httpx)** — Connection transport timeouts and pool teardown guarantees.
+Systems engineer based in Stockholm, Sweden.  
+Working on async I/O primitives, structured concurrency, and event-loop invariants.
 
 ---
 
-### 🛡️ Pre-Flight Verification & Discipline
+### ⚡ Technical Domains & Focus
 
-1. **Cancellation Cleanliness**: Tasks must release file descriptors and sockets cleanly during CancelledError cascades.
-2. **Deterministic Regression Tests**: All fixes include targeted unit tests exercising boundary timing conditions.
-3. **Pre-Flight Invariant Airlock**: All patches are pre-flight validated against regression invariants using [ZeroSlop™ CI](https://github.com/marketplace/actions/zeroslop-by-ribbsaeter-systems).
+| Domain | Focus |
+|---|---|
+| **Structured Concurrency** | Task group cancellation, exception bubbling, and clean child termination |
+| **Event Loop Internals** | Timer precision, selector loop performance, and task scheduling |
+| **Async Protocols** | Streaming data pipelines, backpressure handling, and graceful shutdown |
 
 ---
-*Python • AsyncIO • AnyIO • ZeroSlop™ CI*
+
+### 📐 Principles
+
+1. **Leak-Free Concurrency**: Ensuring every spawned background task has a deterministic parent scope.
+2. **Explicit Cancellation**: Shielding critical rollback blocks while honoring cancellation tokens.
+3. **Strict Type Annotations**: Using modern typing primitives (`TypeVar`, `ParamSpec`, `Protocol`) for async signatures.
+
+---
+*Python • AsyncIO • AnyIO • Trio • Structured Concurrency*
