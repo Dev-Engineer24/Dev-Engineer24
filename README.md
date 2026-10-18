@@ -1,5 +1,10 @@
 # Erik Lindqvist
 
+<p align="center">
+  <img src="assets/dev_header.png" alt="Developer Terminal" width="100%" style="border-radius: 10px;">
+</p>
+
+
 Systems engineer based in Stockholm, Sweden.  
 Working on async I/O primitives, structured concurrency, and event-loop invariants.
 
